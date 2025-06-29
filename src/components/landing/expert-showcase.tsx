@@ -1,6 +1,5 @@
 import { curateExpertQuotes } from '@/ai/flows/curate-expert-quotes';
 import { ExpertCarousel } from './expert-carousel';
-import { Badge } from '../ui/badge';
 
 export async function ExpertShowcase() {
   const expertResponses = [
@@ -34,15 +33,17 @@ export async function ExpertShowcase() {
   }));
 
   return (
-    <section id="experts" className="w-full py-20 md:py-32">
+    <section id="experts" className="w-full py-16">
       <div className="container px-4 md:px-6">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 space-y-4">
             <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
                 Voices We're Amplifying
             </h2>
-            <p className="mt-4 text-lg text-foreground/70">
-              <Badge className="bg-accent/20 text-accent border-accent/30 text-lg py-1 px-3">15+</Badge> experts engaged and counting
-            </p>
+            <div className="flex justify-center">
+                <p className="text-lg text-foreground/70 red-pen-circle">
+                  15+ experts engaged
+                </p>
+            </div>
         </div>
         <ExpertCarousel experts={experts} />
       </div>

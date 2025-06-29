@@ -1,7 +1,6 @@
 import type {Config} from 'tailwindcss';
 
 export default {
-  darkMode: ['class'],
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -10,9 +9,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Inter', 'sans-serif'],
-        headline: ['"Space Grotesk"', 'sans-serif'],
-        code: ['monospace'],
+        body: ['"Roboto Mono"', 'monospace'],
+        headline: ['"Special Elite"', 'monospace'],
+        handwritten: ['"Kalam"', 'cursive'],
       },
       colors: {
         background: 'hsl(var(--background))',
